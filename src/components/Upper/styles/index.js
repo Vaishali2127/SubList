@@ -5,11 +5,30 @@ export const Wrapper = styled.div`
     align-items: center;
     height: 90vh;
     
+    @media (max-width:800px){
+        height: 70vh;
+    }
+    @media (max-width:600px){
+        height: 60vh;
+    }
+    @media (max-width:400px){
+        height: 50vh;
+    }
 `
 export const Card = styled.div`
     display: flex;
     margin: 0 ;
     height: 80vh;
+
+    @media (max-width:800px){
+        height: 65vh;
+    }
+    @media (max-width:800px){
+        height: 50vh;
+    }
+    @media (max-width:400px){
+        height: 35vh;
+    }
 `
 export const Para = styled.p`
     color: #fff;
