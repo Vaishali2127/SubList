@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
+  /* flex-direction: column; */
+  /* width: 100%;
+  height: 80vh; */
+  /* align-items: center;
+  justify-content: center; */
 
   @media (max-width:800px){
     height: 70vh;
@@ -47,10 +47,11 @@ export const Card = styled.div`
     height: 30vh;
   }
 `;
-export const Button = styled.p`
+export const Button = styled.button`
   width: 25%;
-  border-bottom: 2px solid red;
-  border-top: 2px solid red;
+  border: 1px solid black;
+  /* border-bottom: 2px solid red;
+  border-top: 2px solid red; */
   text-align: center;
 `;
 
