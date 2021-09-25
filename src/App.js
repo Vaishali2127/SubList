@@ -20,7 +20,7 @@ function App() {
           Learn React
         </a> */}
         <Navbar />
-        <Upper />
+        {/* <Upper /> */}
         <MainDiv />
         {/* <BookFreeDemo /> */}
       </header>

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Wrapper, Card, CardWrapper, Form } from './styles'
+import React from "react";
+import { Wrapper, Card, CardWrapper, Form } from "./styles";
 
 const MainDiv = () => {
   return (
@@ -13,22 +13,16 @@ const MainDiv = () => {
           Science
           {/* <Button>Add+</Button> */}
         </Card>
-        <Card>
+        <Card>English</Card>
+        {/* <Card>
           English
-          {/* <Button>Add+</Button> */}
         </Card>
         <Card>
           English
-          {/* <Button>Add+</Button> */}
         </Card>
         <Card>
           English
-          {/* <Button>Add+</Button> */}
-        </Card>
-        <Card>
-          English
-          {/* <Button>Add+</Button> */}
-        </Card>
+        </Card> */}
       </CardWrapper>
       <Form>
         <form>
@@ -38,7 +32,7 @@ const MainDiv = () => {
         </form>
       </Form>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default MainDiv
+export default MainDiv;
