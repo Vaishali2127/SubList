@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-import { Navbar, Upper, MainDiv, BookFreeDemo } from "./components";
+import { Navbar, Upper, SubList, BookFreeDemo } from "./components";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <Navbar />
         {/* <Upper /> */}
-        <MainDiv />
+        <SubList />
         {/* <BookFreeDemo /> */}
       </header>
     </div>

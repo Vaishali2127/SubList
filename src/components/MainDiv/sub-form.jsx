@@ -1,8 +1,14 @@
-import React, { useState } from "react";
-import { Wrapper, Card, CardWrapper, Form, Button } from "./styles";
+import React, { useState, useEffect, useRef } from "react";
+// import { Wrapper, Card, CardWrapper, Form, Button } from "./styles";
 
 function SubForm(props) {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(props.edit ? props.edit.value : "");
+
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  });
 
   const handleChange = (e) => {
     setInput(e.target.value);
@@ -11,14 +17,15 @@ function SubForm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // props.onSubmit({
-    //   id: Math.floor(Math.random() * 10000),
-    //   text: input,
-    // });
+    props.onSubmit({
+      id: Math.floor(Math.random() * 10000),
+      text: input,
+    });
     setInput("");
   };
   return (
-    <Wrapper>
+    <div>
+      {/* <Wrapper> */}
       {/* <CardWrapper>
         <Card>
           Mathematics
@@ -32,20 +39,35 @@ function SubForm(props) {
       </CardWrapper> */}
       {/* <Form> */}
       <form className="todo-form" onSubmit={handleSubmit}>
-        {/* <label>Add+</label>
-          <input type="text" name="add" /> */}
-        <input
-          type="text"
-          placeholder="Add a subject"
-          value={input}
-          name="text"
-          className="todo-input"
-          onChange={handleChange}
-        />
-        <Button className="todo-button">Add+</Button>
+        {props.edit ? (
+          <>
+            <input
+              type="text"
+              placeholder="Add a subject"
+              value={input}
+              name="text"
+              className="todo-input"
+              onChange={handleChange}
+            />
+            <button className="todo-button">Add+</button>
+          </>
+        ) : (
+          <>
+            <input
+              placeholder="Add a todo"
+              value={input}
+              onChange={handleChange}
+              name="text"
+              className="todo-input"
+              ref={inputRef}
+            />
+            <button onClick={handleSubmit} className="todo-button">
+              Add todo
+            </button>
+          </>
+        )}
       </form>
-      {/* </Form> */}
-    </Wrapper>
+    </div>
   );
 }
 
